@@ -198,7 +198,7 @@ public class MapActivity extends ActionBarActivity implements LocationListener,
 
 		VenuesCriteria criteria = new VenuesCriteria();
 		criteria.setLocation(location);
-		criteria.setQuantity(50);
+		criteria.setQuantity(30);
 
 		async.getVenuesNearby(new FoursquareVenuesRequestListener() {
 
@@ -222,7 +222,7 @@ public class MapActivity extends ActionBarActivity implements LocationListener,
 							&& (venues.get(i).getCategories().size() != 0)) {
 						Icon icon = venues.get(i).getCategories().get(0)
 								.getIcon();
-						place.setImageUrl(icon.getPrefix() + "bg_88"
+						place.setImageUrl(icon.getPrefix() + "bg_32"             // bg_32 is the size of the image because of a bug in foursqaure
 								+ icon.getSuffix());
 					} else {
 						place.setImageUrl(null);
